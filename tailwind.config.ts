@@ -27,6 +27,9 @@ const config: Config = {
       animation: {
         aurora: "aurora 60s linear infinite",
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
       keyframes: {
         aurora: {
           from: {
