@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Cover } from "./ui/cover"
-import logo from "../assets/images/pixelperfect.png"
-import { Menu } from "lucide-react"
-import { useState } from "react"
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Cover } from "./ui/cover";
+import logo from "../assets/images/pixelperfect.png";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import { HireUSButton } from "./hire-us-button";
 
 export const HeroSection = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="bg-gradient-to-b from-gray-50 to-white">
@@ -17,8 +18,15 @@ export const HeroSection = () => {
         <div className="container px-4 mx-auto sm:px-6 lg:px-8">
           <div className="relative flex justify-between items-center">
             <div className="flex-shrink-0">
-              <Link href="#" className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2">
-                <Image className="w-auto h-10" src={logo || "/placeholder.svg"} alt="TechVortex Logo" />
+              <Link
+                href="#"
+                className="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                <Image
+                  className="w-auto h-10"
+                  src={logo || "/placeholder.svg"}
+                  alt="TechVortex Logo"
+                />
               </Link>
             </div>
             <div className="hidden md:flex md:items-center md:justify-center md:space-x-10">
@@ -59,17 +67,18 @@ export const HeroSection = () => {
                 </Cover>
               </h1>
               <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">
-                We build beautiful products with the latest technologies and frameworks. We are a team of passionate
-                developers and designers that love to build amazing products.
+                We build beautiful products with the latest technologies and
+                frameworks. We are a team of passionate developers and designers
+                that love to build amazing products.
               </p>
 
               <Link
                 href="#"
                 title=""
-                className="inline-flex px-8 py-4 mt-8 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded-full sm:mt-10 font-poppins hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                className="inline-flex md:mt-10 mt-10 font-poppins"
                 role="button"
               >
-                Hire Us
+                <HireUSButton />
               </Link>
 
               <Testimonial />
@@ -86,13 +95,13 @@ export const HeroSection = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
 const NavLinks = ({ mobile = false }) => {
   const linkClass = `text-base font-semibold font-poppins hover:text-gray-700 transition-colors duration-200 ${
     mobile ? "block py-2" : ""
-  }`
+  }`;
 
   return (
     <>
@@ -112,8 +121,8 @@ const NavLinks = ({ mobile = false }) => {
         CONTACT US
       </Link>
     </>
-  )
-}
+  );
+};
 
 const Testimonial = () => (
   <div className="mt-8 sm:mt-16">
@@ -132,9 +141,14 @@ const Testimonial = () => (
     </div>
 
     <blockquote className="mt-6">
-      <p className="text-lg font-bold text-gray-900 font-poppins">Best software house in the market!</p>
+      <p className="text-lg font-bold text-gray-900 font-poppins">
+        Best software house in the market!
+      </p>
       <p className="mt-3 text-base leading-7 text-gray-600 font-inter">
-      TechVortex developed an exceptional software solution that aligns perfectly with our needs. Their team’s technical expertise and attention to detail went beyond our expectations, delivering a product that truly stands out.
+        TechVortex developed an exceptional software solution that aligns
+        perfectly with our needs. Their team’s technical expertise and attention
+        to detail went beyond our expectations, delivering a product that truly
+        stands out.
       </p>
     </blockquote>
 
@@ -144,8 +158,9 @@ const Testimonial = () => (
         src="https://img.freepik.com/free-photo/portrait-handsome-attractive-stylish-bearded-man-brown_285396-4617.jpg?t=st=1737466491~exp=1737470091~hmac=80c009dc32778d7ed862abe3e988c39cb3a47c5a1c7d0b5ca2f53254504b1b0a&w=1380"
         alt="Denny Jones"
       />
-      <p className="ml-2 text-base font-bold text-gray-900 font-poppins">Hudson</p>
+      <p className="ml-2 text-base font-bold text-gray-900 font-poppins">
+        Hudson
+      </p>
     </div>
   </div>
-)
-
+);
